@@ -1161,11 +1161,12 @@
                 },
                 hint: {
                     position: "absolute",
-                    top: "0",
                     left: "0",
                     borderColor: "transparent",
                     boxShadow: "none",
-                    opacity: "1"
+                    opacity: "1",
+                    width: "inherit",
+                    margin-right: "-5px"
                 },
                 input: {
                     position: "relative",
