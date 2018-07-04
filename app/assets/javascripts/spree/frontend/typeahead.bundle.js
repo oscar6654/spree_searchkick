@@ -1166,7 +1166,7 @@
                     boxShadow: "none",
                     opacity: "1",
                     width: "inherit",
-                    margin-right: "-5px"
+                    "margin-right": "-5px",
                 },
                 input: {
                     position: "relative",
@@ -1183,7 +1183,7 @@
                     left: "0",
                     zIndex: "100",
                     display: "none",
-                    margin-right: "-5px"
+                    "margin-right": "-5px",
                 },
                 ltr: {
                     left: "0",
