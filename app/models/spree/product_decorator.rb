@@ -1,6 +1,6 @@
 Spree::Product.class_eval do
-#   searchkick word_start: [:name], settings: { number_of_replicas: 0 } unless respond_to?(:searchkick_index)
-  searchkick word_start: [:name]
+  searchkick word_start: [:name], settings: { number_of_replicas: 0 } unless respond_to?(:searchkick_index)
+
   def self.autocomplete_fields
     [:name]
   end
