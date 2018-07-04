@@ -1182,7 +1182,8 @@
                     top: "100%",
                     left: "0",
                     zIndex: "100",
-                    display: "none"
+                    display: "none",
+                    margin-right: "-5px"
                 },
                 ltr: {
                     left: "0",
