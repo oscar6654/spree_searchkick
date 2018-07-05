@@ -7,7 +7,10 @@ Spree.typeaheadSearch = function() {
     datumTokenizer: Bloodhound.tokenizers.whitespace,
     queryTokenizer: Bloodhound.tokenizers.whitespace,
     limit: 10,
-    prefetch: Spree.pathFor('autocomplete/products.json'),
+    prefetch: {
+      url: Spree.pathFor('autocomplete/products.json'),
+      cache: false
+    },
     remote: {
       url: Spree.pathFor('autocomplete/products.json?keywords=%25QUERY'),
       wildcard: '%QUERY'
