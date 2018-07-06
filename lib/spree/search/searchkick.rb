@@ -1,6 +1,18 @@
 module Spree
   module Search
     class Searchkick < Spree::Core::Search::Base
+      
+      def retrieve_products1
+        @products = get_base_scope
+        curr_page = page || 1
+
+        unless Spree::Config.show_products_without_price
+          @products = @products.where('spree_prices.amount IS NOT NULL').
+                      where('spree_prices.currency' => current_currency)
+        end
+        @products = @products.page(curr_page).per(per_page)
+      end      
+      
       def retrieve_products
         @products = base_elasticsearch
       end
